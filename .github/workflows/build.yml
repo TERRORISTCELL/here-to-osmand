@@ -24,14 +24,14 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Make Gradlew Executable
-        run: chmod +x gradlew
+      - name: Generate Gradle Wrapper Jar
+        run: gradle wrapper
 
       - name: Run Unit Tests
-        run: ./gradlew test --stacktrace
+        run: gradle test --stacktrace
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4

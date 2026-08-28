@@ -5,8 +5,8 @@
 APP_NAME="Gradle"
 APP_BASE_NAME=`basename "$0"`
 
-# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+# Add default JVM options here.
+DEFAULT_JVM_OPTS="-Xmx64m -Xms64m"
 
 # Use location of script to infer project root directory
 PRG="$0"
@@ -39,7 +39,8 @@ else
 fi
 
 if ! command -v "$JAVACMD" >/dev/null 2>&1; then
-    die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH."
+    echo "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH." >&2
+    exit 1
 fi
 
 # Execute Gradle

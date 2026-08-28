@@ -22,7 +22,7 @@ data class NavigationTarget(
     fun getFormattedDestination(): String {
         return when {
             hasCoordinates() -> String.format("%.5f, %.5f", destLat, destLon)
-            !query.isNull_or_blank() -> query
+            !query.isNullOrBlank() -> query
             else -> "Unknown Destination"
         }
     }

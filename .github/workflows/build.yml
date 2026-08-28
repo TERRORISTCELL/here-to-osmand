@@ -28,10 +28,10 @@ jobs:
         run: gradle wrapper
 
       - name: Run Unit Tests
-        run: gradle test --stacktrace
+        run: gradle test --info
 
       - name: Build Debug APK
-        run: gradle assembleDebug --stacktrace
+        run: gradle assembleDebug --info
 
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4

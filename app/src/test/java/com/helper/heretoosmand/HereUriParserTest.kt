@@ -82,7 +82,7 @@ class HereUriParserTest {
 
         assertEquals(52.5163, target.destLat!!, 0.0001)
         assertEquals(13.3777, target.destLon!!, 0.0001)
-        assertEquals("Brandenburg+Gate", target.label)
+        assertEquals("Brandenburg Gate", target.label)
     }
 
     @Test
